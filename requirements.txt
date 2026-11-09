@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+econml
+dowhy
+lifelines
+jupyter
+ipykernel
+pytest
