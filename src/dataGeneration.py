@@ -4,7 +4,7 @@ from scipy.special import expit
 
 
 def generateCustomerData(n=10000, seed=42):
-    rng = np.random.defualt_rng(seed)
+    rng = np.random.default_rng(seed)
 
     tenure = rng.gamma(3, 8, n)
     spend = rng.lognormal(7, 0.6, n)
