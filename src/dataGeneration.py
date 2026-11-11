@@ -11,7 +11,7 @@ def generateCustomerData(n=10000, seed=42):
     engagement = rng.beta(2, 2, n)
     frequency = rng.poisson(4, n)
 
-    sepndZ = (spend - spend.mean()) / (spend.std())
+    spendZ = (spend - spend.mean()) / (spend.std())
     tenureZ = (tenure - tenure.mean()) / (tenure.std())
     frequencyZ = (frequency - frequency.mean()) / (frequency.std() + 1e-8)
     truePropensity = expit(-1.0 + 0.55*spendZ + 0.75*engagement + 0.25*tenureZ + 0.35*frequencyZ)
@@ -44,7 +44,7 @@ def generateCustomerData(n=10000, seed=42):
         "engagement": engagement,
         "purchaseFrequency": frequency,
         "treatment": treatment,
-        "revenue90d": revenue90d
+        "revenue90d": revenue90d,
         "churnEvent": event,
         "durationMonths": duration,
         "trueCate": trueCate,
