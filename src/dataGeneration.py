@@ -38,7 +38,7 @@ def generateCustomerData(n=10000, seed=42):
     event = (eventTime <= censorTime).astype(int)
 
     df = pd.DataFrame({
-        "customedId": np.arange(n),
+        "customerId": np.arange(n),
         "tenureMonths": tenure,
         "historicalSpend": spend,
         "engagement": engagement,
