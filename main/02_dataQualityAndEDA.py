@@ -50,5 +50,3 @@ features = [
     "purchaseFrequency",
     "revenue90d"
 ]
-
-comparison = (df.groupby)
