@@ -1,4 +1,4 @@
-from scipy import ttest_ind
+from scipy.stats import ttest_ind
 from statsmodels.stats.power import TTestIndPower
 import numpy as np
 import pandas as pd
