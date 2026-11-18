@@ -11,3 +11,4 @@ lifelines
 jupyter
 ipykernel
 pytest
+PySide6
