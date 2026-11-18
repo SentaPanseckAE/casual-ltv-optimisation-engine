@@ -1,8 +1,11 @@
 from econml.dml import LinearDML
 from sklearn.ensemble import (RandomForestClassifier, RandomForestRegressor)
+from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import numpy as np
+
 
 df = pd.read_csv("data/synthetic/customers.csv")
 
@@ -52,3 +55,6 @@ plt.show()
 df['engagementGroup'] = pd.qcut(df['engagement'], q=4, labels=['Low', 'Medium-Low', 'Medium-High', 'High'])
 
 print(df.groupby('engagementGroup')['estimatedCate'].mean())
+
+cate_rmse = np.sqrt(mean_squared_error(df['trueCate'], df['estimatedCate']))
+print("CATE RMSE: ", cate_rmse)
