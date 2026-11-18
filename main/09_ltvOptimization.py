@@ -104,4 +104,3 @@ print("Customers selected: ", len(selected))
 print("Intervention cost: ", len(selected) * costPerCustomer)
 
 print("Estimated incremental profit: ", selected["expected_incremental_profit"].sum())
-
