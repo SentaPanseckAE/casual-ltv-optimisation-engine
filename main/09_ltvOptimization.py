@@ -2,6 +2,7 @@ from IPython.core.pylabtools import figsize
 from sympy.polys.rootisolation import dup_count_real_roots
 from lifelines import CoxPHFitter
 from econml.dml import LinearDML
+from sklearn.ensemble import (RandomForestClassifier, RandomForestRegressor)
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
